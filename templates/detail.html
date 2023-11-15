@@ -1,0 +1,14 @@
+    {% extends 'base.html' %}
+
+      {% block content %}
+     <div class="shadow-lg p-3 mb-5 bg-white rounded card" style="width: 18rem;">
+           <div class="card-body">
+             <h5 class="p-3 mb-2 bg-secondary text-white card-title">ToDo: {{task.name}}</h5>
+              <p> Priority: {{task.priority}}</p>
+               <p> Date: {{task.date}}</p>
+               <a href="{% url 'delete' task.id %}" class="btn btn-outline-danger">Delete</a>
+               <a href="{% url 'update' task.id %}" class="btn btn-outline-primary">Update</a>
+
+        </div>
+        </div>
+    {% endblock %}
